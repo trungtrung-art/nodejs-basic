@@ -1,0 +1,25 @@
+{
+  "name": "nodejs-basic",
+  "version": "1.0.0",
+  "description": "learning nodejs basic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trungtrung-art/nodejs-basic.git"
+  },
+  "keywords": [
+    "NODEJS-BASIC"
+  ],
+  "author": "trungtrungcum",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trungtrung-art/nodejs-basic/issues"
+  },
+  "homepage": "https://github.com/trungtrung-art/nodejs-basic#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
