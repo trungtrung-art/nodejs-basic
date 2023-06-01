@@ -22,7 +22,7 @@ export const getHomepage = (req, res) => {
         )
       })
 
-      return res.render('index.ejs', { data: JSON.stringify(data) })
+      return res.render('index.ejs', { dataUser: data })
     }
   );
   
