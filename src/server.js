@@ -1,6 +1,7 @@
 import express from 'express'
 import configViewEngine from './configs/configViewengine'
 import initWebRouter from './routes/web'
+import connection from './configs/connectDB'
 import 'dotenv/config'
 
 const app = express()
