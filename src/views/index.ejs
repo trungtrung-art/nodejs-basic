@@ -16,38 +16,65 @@
     <a href="#about">About</a>
   </div>
 
-  <%= dataUser %>
-
-    <table>
+  <table>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Action</th>
+    </tr>
+    <% for(let i=0; i < dataUser.length; i++) { %>
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Action</th>
-      </tr>
-      <% for(let i=0; i < dataUser.length; i++) { %>
-        <tr>
-          <td>
-            <%= dataUser[i].firstName %>
-          </td>
-          <td>
-            <%= dataUser[i].lastName %>
-          </td>
-          <td>
-            <%= dataUser[i].email %>
-          </td>
-          <td>
-            <%= dataUser[i].address %>
-          </td>
-          <td>
-            <a href='/detail/user/<%= dataUser[i].id %>''>detail</a>
+        <td>
+          <%= dataUser[i].firstName %>
+        </td>
+        <td>
+          <%= dataUser[i].lastName %>
+        </td>
+        <td>
+          <%= dataUser[i].email %>
+        </td>
+        <td>
+          <%= dataUser[i].address %>
+        </td>
+        <td>
+          <a href='/detail/user/<%= dataUser[i].id %>'>detail</a>
             <button>edit</button>
             <button>delete</button>
           </td>
         </tr>
         <% } %>
-    </table>
+
+  </table>
+
+  <div>
+    <div class="create-user-container">
+      <div><b>Create a new user</b></div>
+      <form action="/create-new-user" method="POST">
+        <div>
+          <label for="firstName">FirstName:</label>
+          <input name="firstName" type="text"/>
+        </div>
+        <div>
+          <label for="lastName">LastName:</label>
+          <input name="lastName" type="text"/>
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input name="email" type="email"/>
+        </div>
+        <div>
+          <label for="address">Address:</label>
+          <input name="address" type="text"/>
+        </div>
+        <div>
+          <button class="btn-submit" type="submit">Submit</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
 
 </body>
 

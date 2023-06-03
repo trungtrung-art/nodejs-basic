@@ -7,6 +7,9 @@ import 'dotenv/config'
 const app = express()
 const port = process.env.PORT || 8080; // backup with port 8080 if you forget import dotenv
 
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+
 //setup view engine
 configViewEngine(app)
 
