@@ -1,5 +1,5 @@
 import express from "express";
-import { getHomepage, getDetailUser, createNewUser, deleteUser, getEditUser, putUpdateUser, getUploadFilesPage, handleUploadFile } from "../controller/homeController";
+import { getHomepage, getDetailUser, createNewUser, deleteUser, getEditUser, putUpdateUser, getUploadFilesPage, handleUploadFile, handleUploadMultipleFile } from "../controller/homeController";
 import multer from "multer";
 import path from "path";
 
@@ -49,6 +49,7 @@ const initWebRouter = (app) => {
 
   router.get('/upload', getUploadFilesPage);
   router.post('/upload-profile-pic', upload.single('profile_pic'), handleUploadFile)
+  router.post('/upload-multiple-images', upload.array('multiple_images', 10), handleUploadMultipleFile)
 
   return app.use('/', router)
 }
