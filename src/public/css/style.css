@@ -63,3 +63,16 @@ tr:hover {background-color: coral;}
   margin-top: 15px;
   cursor: pointer;
 }
+
+.btn-save{
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.upload-file-container{
+  padding: 15px;
+}
+
+.upload-file-container label{
+  display: block;
+}
